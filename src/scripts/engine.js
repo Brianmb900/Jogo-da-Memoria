@@ -40,6 +40,11 @@ function handleClick(){
 }
 
 function checkMatch(){
+    if(document.querySelectorAll(".boxMatch").length === emojis.length){
+        alert("Você venceu!");
+        window.location.reload();
+    }
+    
     if(openCards[0].innerHTML === openCards[1].innerHTML){
         openCards[0].classList.add("boxMatch");
         openCards[1].classList.add("boxMatch");
@@ -48,8 +53,4 @@ function checkMatch(){
         openCards[1].classList.remove("boxOpen");
     }
     openCards =  [];
-
-    if(document.querySelectorAll(".boxMatch").length === emojis.length){
-        alert("Você venceu!")
-    }
 }

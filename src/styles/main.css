@@ -76,13 +76,13 @@ h2 {
   position: absolute;
   inset: 0;
   background-color: #404040;
-  transition: 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
 }
 
 .item.boxOpen {
   transform: rotateY(0deg);
+  pointer-events: none;
 }
 
 .boxOpen::after,
